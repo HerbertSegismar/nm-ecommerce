@@ -1,0 +1,38 @@
+'use client'
+import { navbarData } from '@/constants/navbarData'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React from 'react'
+
+const Navbar = () => {
+    const pathname = usePathname()
+  return (
+    <div className="hidden md:inline-flex w-1/3 items-center justify-between gap-7 text-sm capitalize">
+      {navbarData.map((item) => (
+        <Link
+          key={item.name}
+          href={item.path}
+          className={`${
+            pathname === item.path
+              ? "text-lightGreen"
+              : "text-darkGreen hover:text-lightGreen"
+          } font-semibold hoverEffect relative group hover:scale-105`}
+        >
+          {item.name}
+          <span
+            className={`${
+              pathname === item.path ? "w-1/2 group-hover:w-0" : "w-0 group-hover:w-1/2"
+            } absolute left-1/2 -bottom-0.5 h-0.5 bg-lightGreen hoverEffect group-hover:left-0`}
+          />
+          <span
+            className={`${
+              pathname === item.path ? "w-1/2 group-hover:w-0" : "w-0 group-hover:w-1/2"
+            } absolute right-1/2 -bottom-0.5 h-0.5 bg-lightGreen hoverEffect group-hover:right-0`}
+          />
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+export default Navbar
