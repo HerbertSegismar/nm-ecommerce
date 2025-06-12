@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 const Header = () => {
   return (
-    <header className="bg-white py-5 border-b-black/20 border-b">
+    <header className="bg-white py-5 border-b-black/20 border-b cursor-pointer">
       <Container className="flex items-center justify-between">
         <Logo />
         <Navbar />
