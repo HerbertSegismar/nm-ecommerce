@@ -1,11 +1,12 @@
 import { Search } from 'lucide-react'
+import Link from 'next/link';
 import React from 'react'
 
 const SearchBar = () => {
   return (
-    <div className="hoverEffect hover:text-lightGreen hover:scale-105">
-      <Search />
-    </div>
+    <Link href="/search" className="group relative">
+      <Search className="hoverEffect hover:text-lightGreen hover:scale-105 size-5" />
+    </Link>
   );
 }
 
