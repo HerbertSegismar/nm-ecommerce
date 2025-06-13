@@ -15,4 +15,4 @@ export const navbarData = [
         name: "Deals",
         path: "/deals",
     },
-];
+]
