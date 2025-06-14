@@ -7,7 +7,7 @@ import React from 'react'
 const Navbar = () => {
     const pathname = usePathname()
   return (
-    <div className="hidden md:inline-flex w-1/3 items-center justify-between gap-7 text-sm capitalize font-semibold">
+    <div className="hidden md:inline-flex w-1/3 items-center justify-between gap-7 text-sm capitalize font-semibold cursor-pointer">
       {navbarData.map((item) => (
         <Link
           key={item.name}
@@ -31,7 +31,7 @@ const Navbar = () => {
                 : "group-hover:w-1/2 w-0"
             } absolute right-1/2 -bottom-0.5 h-0.5 bg-lightGreen hoverEffect group-hover:right-0`}
           />
-          <div className='absolute -bottom-0.5 size-full'/>
+          <div className="absolute -bottom-0.5 size-full" />
         </Link>
       ))}
     </div>

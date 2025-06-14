@@ -6,18 +6,22 @@ import SearchBar from './SearchBar'
 import CartIcon from './CartIcon'
 import FavButton from './FavButton'
 import Login from './Login'
+import MobileMenu from './MobileMenu'
 
 const Header = () => {
   return (
-    <header className="bg-white py-5 border-b-black/20 border-b cursor-pointer">
+    <header className="bg-white py-5 border-b-black/20 border-b">
       <Container className="flex items-center justify-between">
-        <Logo />
+        <div className='flex items-center justify-center gap-4 md:gap-0'>
+          <MobileMenu />
+          <Logo />
+        </div>
         <Navbar />
-        <div className='flex items-center gap-4 text-darkGreen'>
+        <div className="flex items-center gap-4 text-darkGreen">
           <SearchBar />
-          <CartIcon/>
-          <FavButton/>
-          <Login/>
+          <CartIcon />
+          <FavButton />
+          <Login />
         </div>
       </Container>
     </header>
