@@ -5,7 +5,7 @@ import SocialLink from './SocialLinks';
 const SocialMediaIcons = () => {
   return (
     <div className="flex items-center justify-center gap-5">
-      {SocialLink.map((item) => (
+      {SocialLink?.map((item) => (
         <Link
           key={item.title}
           href={item.link}
