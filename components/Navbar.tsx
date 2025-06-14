@@ -7,7 +7,7 @@ import React from 'react'
 const Navbar = () => {
     const pathname = usePathname()
   return (
-    <div className="hidden md:inline-flex w-1/3 items-center justify-between gap-7 text-sm capitalize font-semibold cursor-pointer">
+    <div className="hidden md:inline-flex w-1/3 tracking-widest items-center justify-between gap-7 text-sm capitalize font-semibold cursor-pointer">
       {navbarData.map((item) => (
         <Link
           key={item.name}
