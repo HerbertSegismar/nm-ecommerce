@@ -14,7 +14,7 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } hoverEffect`}
     >
-      <div className="text-white flex flex-col justify-between gap-6 px-10 bg-black h-screen min-w-72 max-w-96 border-r border-lightGreen">
+      <div className="text-white flex flex-col justify-between gap-6 px-10 bg-black h-screen min-w-1/3 max-w-2/3 border-r border-lightGreen">
         <div className='flex items-center justify-between gap-5 py-4'>
           <Logo className="text-white" spanDesign="text-lightGreen group-hover:text-white"/>
           <button onClick={onClose} className='hoverEffect hover:text-lightGreen cursor-pointer'><X/></button>
