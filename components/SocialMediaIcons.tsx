@@ -4,33 +4,33 @@ import React from 'react'
 
 const SocialMediaIcons = () => {
   return (
-    <div className="flex items-center justify-center gap-10">
+    <div className="flex items-center justify-center gap-5">
       <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105"
+        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
         href="https://github.com/herbertsegismar"
       >
         <Github />
       </Link>
       <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105"
+        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
         href="https://facebook.com/radicalherbert"
       >
         <Facebook />
       </Link>
       <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105"
+        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
         href="https://youtube.com/wavetreader"
       >
         <Youtube />
       </Link>
       <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105"
+        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
         href="https://github.com/herbertsegismar"
       >
         <Linkedin />
       </Link>
       <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105"
+        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
         href="https://twitter.com/radicalherbert"
       >
         <Twitter />

@@ -61,8 +61,8 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
             </Link>
           ))}
         </div>
-        <div className='absolute top-1/3 border-t border-lightGreen w-full left-0'/>
-        <div className='top-1/3 absolute pt-10'>
+        <div className='absolute top-1/2 border-t border-lightGreen w-full left-0'/>
+        <div className='top-1/2 absolute pt-10'>
           <SocialMediaIcons/>
         </div>
       </div>
