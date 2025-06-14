@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="bg-white py-5 border-b-black/20 border-b">
       <Container className="flex items-center justify-between">
-        <div className='flex items-center justify-center gap-4 md:gap-0'>
+        <div className='flex items-center justify-center gap-2 md:gap-0'>
           <MobileMenu />
           <Logo />
         </div>
