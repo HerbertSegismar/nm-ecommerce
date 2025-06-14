@@ -1,40 +1,21 @@
-import { Facebook, Github, Linkedin, Twitter, Youtube } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import SocialLink from './SocialLinks';
 
 const SocialMediaIcons = () => {
   return (
     <div className="flex items-center justify-center gap-5">
-      <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
-        href="https://github.com/herbertsegismar"
-      >
-        <Github />
-      </Link>
-      <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
-        href="https://facebook.com/radicalherbert"
-      >
-        <Facebook />
-      </Link>
-      <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
-        href="https://youtube.com/wavetreader"
-      >
-        <Youtube />
-      </Link>
-      <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
-        href="https://github.com/herbertsegismar"
-      >
-        <Linkedin />
-      </Link>
-      <Link
-        className="hoverEffect hover:text-lightGreen hover:scale-105 size-5"
-        href="https://twitter.com/radicalherbert"
-      >
-        <Twitter />
-      </Link>
+      {SocialLink.map((item) => (
+        <Link
+          key={item.title}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className='hoverEffect hover:text-lightGreen hover:scale-105 size-5'
+        >
+          {item.icon}
+        </Link>
+      ))}
     </div>
   );
 }
