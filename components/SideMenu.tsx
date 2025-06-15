@@ -41,7 +41,7 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
             <Link
               key={item?.name}
               href={item?.path}
-              className={`text-white hover:text-lightGreen hoverEffect relative group tracking-widest hover:scale-105 ${
+              className={`hover:text-lightGreen hoverEffect relative group tracking-widest hover:scale-105 ${
                 pathname === item?.path && "text-lightGreen"
               }`}
             >
