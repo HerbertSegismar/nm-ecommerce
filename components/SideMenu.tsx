@@ -6,6 +6,8 @@ import { navbarData } from '@/constants/navbarData'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import SocialMediaIcons from './SocialMediaIcons'
+import { on } from 'events'
+import { useOutsideClick } from '@/hooks'
 
 interface SideBarProps {
     isOpen: boolean
@@ -14,13 +16,14 @@ interface SideBarProps {
 
 const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
     const pathname = usePathname()
+    const sideMenuRef = useOutsideClick<HTMLDivElement>(onClose)
   return (
     <div
       className={`fixed inset-y-0 h-screen w-full left-0 z-50 bg-black/50 shadow-xl ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } hoverEffect`}
     >
-      <div className="text-white relative flex flex-col justify-between gap-6 px-10 bg-black h-screen hoverEffect  min-w-1/3 max-w-2/3 border-r border-lightGreen">
+      <div ref={sideMenuRef} className="text-white relative flex flex-col justify-between gap-6 px-10 bg-black h-screen hoverEffect  min-w-1/3 max-w-2/3 border-r border-lightGreen">
         <div className="flex items-center justify-between gap-5 py-4">
           <Logo
             className="text-white"
@@ -33,26 +36,26 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
             <X />
           </button>
         </div>
-        <div className="flex flex-col absolute gap-7 mt-20 text-lg capitalize tracking-widest font-semibold cursor-pointer">
-          {navbarData.map((item) => (
+        <div className="flex flex-col absolute gap-7 mt-20 text-lg capitalize font-semibold cursor-pointer">
+          {navbarData?.map((item) => (
             <Link
-              key={item.name}
-              href={item.path}
-              className={`text-white hover:text-lightGreen hoverEffect relative group hover:scale-105 ${
-                pathname === item.path && "text-lightGreen"
+              key={item?.name}
+              href={item?.path}
+              className={`text-white hover:text-lightGreen hoverEffect relative group tracking-widest hover:scale-105 ${
+                pathname === item?.path && "text-lightGreen"
               }`}
             >
-              {item.name}
+              {item?.name}
               <span
                 className={`${
-                  pathname === item.path
+                  pathname === item?.path
                     ? "group-hover:w-0 w-1/2"
                     : "group-hover:w-1/2 w-0"
                 } absolute left-1/2 -bottom-0.5 h-0.5 bg-lightGreen hoverEffect group-hover:left-0`}
               />
               <span
                 className={`${
-                  pathname === item.path
+                  pathname === item?.path
                     ? "group-hover:w-0 w-1/2"
                     : "group-hover:w-1/2 w-0"
                 } absolute right-1/2 -bottom-0.5 h-0.5 bg-lightGreen hoverEffect group-hover:right-0`}
