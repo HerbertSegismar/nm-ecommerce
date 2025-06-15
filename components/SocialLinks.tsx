@@ -5,27 +5,27 @@ const SocialLink = [
   {
     title: "Github",
     link: "https://github.com/herbertsegismar",
-    icon: <Github className="size-5" />,
+    icon: <Github className="size-4 md:size-5" />,
   },
   {
     title: "Facebook",
     link: "https://facebook.com/radicalherbert",
-    icon: <Facebook className="size-5" />,
+    icon: <Facebook className="size-4 md:size-5" />,
   },
   {
     title: "Youtube",
     link: "https://youtube.com/wavetreader",
-    icon: <Youtube className="size-5" />,
+    icon: <Youtube className="size-4 md:size-5" />,
   },
   {
     title: "Linkedin",
     link: "https://github.com/herbertsegismar",
-    icon: <Linkedin className="size-5" />,
+    icon: <Linkedin className="size-4 md:size-5" />,
   },
   {
     title: "Twitter",
     link: "https://github.com/herbertsegismar",
-    icon: <Twitch className="size-5" />,
+    icon: <Twitch className="size-4 md:size-5" />,
   },
 ];
 
