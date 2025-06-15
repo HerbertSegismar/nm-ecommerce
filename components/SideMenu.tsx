@@ -33,7 +33,7 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
             <X />
           </button>
         </div>
-        <div className="flex flex-col absolute gap-7 mt-20 pt-10 text-lg capitalize tracking-widest font-semibold cursor-pointer">
+        <div className="flex flex-col absolute gap-7 mt-20 text-lg capitalize tracking-widest font-semibold cursor-pointer">
           {navbarData.map((item) => (
             <Link
               key={item.name}
