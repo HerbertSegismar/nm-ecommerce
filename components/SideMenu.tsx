@@ -23,7 +23,7 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } hoverEffect`}
     >
-      <div ref={sideMenuRef} className="text-white relative flex flex-col justify-between gap-6 px-10 bg-black h-screen hoverEffect  min-w-1/3 max-w-2/3 border-r border-lightGreen">
+      <div ref={sideMenuRef} className="text-white relative flex flex-col justify-between gap-6 px-10 bg-black h-screen hoverEffect w-3/4 border-r border-lightGreen">
         <div className="flex items-center justify-between gap-5 py-4">
           <Logo
             className="text-white"
@@ -36,7 +36,7 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
             <X />
           </button>
         </div>
-        <div className="flex flex-col absolute gap-7 mt-20 text-lg capitalize font-semibold cursor-pointer">
+        <div className="flex flex-col absolute gap-7 mt-20 text-[16px] capitalize font-semibold cursor-pointer">
           {navbarData?.map((item) => (
             <Link
               key={item?.name}
