@@ -1,12 +1,14 @@
-import Link from 'next/link'
 import React from 'react'
+import { SignInButton } from "@clerk/nextjs";
 
 const Login = () => {
   return (
-    <Link href="/login" className="hoverEffect hover:text-lightGreen hover:scale-105 group relative font-semibold font-inter">
+    <SignInButton mode="modal">
+      <button className="hoverEffect hover:text-lightGreen hover:scale-105 group relative font-semibold">
         Login
-    </Link>
-  )
+      </button>
+    </SignInButton>
+  );
 }
 
 export default Login

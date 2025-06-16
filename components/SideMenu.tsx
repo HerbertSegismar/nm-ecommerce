@@ -6,7 +6,6 @@ import { navbarData } from '@/constants/navbarData'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import SocialMediaIcons from './SocialMediaIcons'
-import { on } from 'events'
 import { useOutsideClick } from '@/hooks'
 
 interface SideBarProps {
