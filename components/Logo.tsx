@@ -7,7 +7,7 @@ const Logo = ({className, spanDesign}: {className?: string, spanDesign?: string}
     <Link href="/">
       <h1
         className={cn(
-          "group hover:scale-105 text-2xl hoverEffect tracking-wider cursor-pointer font-sans uppercase font-bold text-darkGreen hover:text-lightGreen",
+          "group text-2xl hoverEffect tracking-wider cursor-pointer font-sans uppercase font-bold text-darkGreen hover:text-lightGreen",
           className
         )}
       >

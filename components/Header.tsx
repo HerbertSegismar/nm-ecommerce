@@ -17,7 +17,7 @@ const Header = async() => {
       <Container className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-2 md:gap-0">
           <MobileMenu />
-          <Logo />
+          <Logo className="hover:scale-105"/>
         </div>
         <Navbar />
         <div className="flex items-center gap-4 text-darkGreen">
@@ -26,7 +26,7 @@ const Header = async() => {
           <FavButton />
           <ClerkLoaded>
             <SignedIn>
-              <UserButton/>
+              <UserButton />
             </SignedIn>
             {!user && <Login />}
           </ClerkLoaded>

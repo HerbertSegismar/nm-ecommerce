@@ -14,7 +14,7 @@ interface Props {
 const SocialMediaIcons = ({className, iconClassName, tooltipClassName}: Props) => {
   return (
     <TooltipProvider>
-      <div className={cn("flex items-center justify-center gap-2", className)}>
+      <div className={cn("flex items-center gap-2", className)}>
         {SocialLink?.map((item) => (
           <Tooltip key={item?.title}>
             <TooltipTrigger asChild>
@@ -24,7 +24,7 @@ const SocialMediaIcons = ({className, iconClassName, tooltipClassName}: Props) =
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  "hoverEffect hover:text-lightGreen hover:scale-105 p-2 border border-white hover:border-lightGreen rounded-full",
+                  "hoverEffect hover:text-lightGreen  p-2 border border-white hover:border-lightGreen rounded-full",
                   iconClassName
                 )}
               >
