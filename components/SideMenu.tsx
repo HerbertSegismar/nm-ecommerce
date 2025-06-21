@@ -1,7 +1,7 @@
 'use client'
 import React, { FC } from 'react'
 import Logo from './Logo'
-import { Github, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { navbarData } from '@/constants/navbarData'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
