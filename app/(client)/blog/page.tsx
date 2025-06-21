@@ -1,5 +1,7 @@
-import React from 'react'
+import React from "react";
 import Container from "@/components/Container";
+
+export const dynamic = "force-dynamic"; // Disables prerendering
 
 const Blog = () => {
   return (
@@ -11,4 +13,4 @@ const Blog = () => {
   );
 };
 
-export default Blog
+export default Blog;
