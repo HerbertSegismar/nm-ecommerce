@@ -3,7 +3,7 @@ import FooterTop from './FooterTop';
 import Container from './Container';
 import Logo from './Logo';
 import SocialMediaIcons from './SocialMediaIcons';
-import { SubText, SubTitle, Title } from './Title';
+import { SubText, Title } from './Title';
 import { categoriesData, quickLinksData } from '@/constants/NavData';
 import Link from 'next/link';
 import { Input } from './ui/input';
