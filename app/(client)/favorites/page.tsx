@@ -1,6 +1,8 @@
 import React from 'react'
 import Container from "@/components/Container";
 
+export const dynamic = "force-dynamic"; // Disables prerendering
+
 const Favorites = () => {
   return (
     <Container>
