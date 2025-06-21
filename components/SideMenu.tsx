@@ -1,28 +1,31 @@
-'use client'
-import React, { FC } from 'react'
-import Logo from './Logo'
-import { X } from 'lucide-react'
-import { navbarData } from '@/constants/navbarData'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import SocialMediaIcons from './SocialMediaIcons'
-import { useOutsideClick } from '@/hooks'
+"use client";
+import React, { FC } from "react";
+import Logo from "./Logo";
+import { X } from "lucide-react";
+import { navbarData } from "@/constants/NavData";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { useOutsideClick } from "@/hooks";
 
 interface SideBarProps {
-    isOpen: boolean
-    onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
-    const pathname = usePathname()
-    const sideMenuRef = useOutsideClick<HTMLDivElement>(onClose)
+const SideMenu: FC<SideBarProps> = ({ isOpen, onClose }) => {
+  const pathname = usePathname();
+  const sideMenuRef = useOutsideClick<HTMLDivElement>(onClose);
   return (
     <div
       className={`fixed inset-y-0 h-screen w-full left-0 z-50 bg-black/50 shadow-xl ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } hoverEffect`}
     >
-      <div ref={sideMenuRef} className="text-white relative flex flex-col justify-between gap-6 px-10 bg-black h-screen hoverEffect w-3/4 border-r border-lightGreen">
+      <div
+        ref={sideMenuRef}
+        className="text-white relative flex flex-col justify-between gap-6 px-10 bg-black h-screen hoverEffect w-3/4 border-r border-lightGreen"
+      >
         <div className="flex items-center justify-between gap-5 py-4">
           <Logo
             className="text-white"
@@ -63,13 +66,13 @@ const SideMenu:FC<SideBarProps> = ({ isOpen, onClose}) => {
             </Link>
           ))}
         </div>
-        <div className='absolute top-1/2 border-t border-lightGreen w-full left-0'/>
-        <div className='top-1/2 absolute pt-10'>
-          <SocialMediaIcons/>
+        <div className="absolute top-1/2 border-t border-lightGreen w-full left-0" />
+        <div className="top-1/2 absolute pt-10">
+          <SocialMediaIcons />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default SideMenu
+export default SideMenu;

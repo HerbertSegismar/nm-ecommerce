@@ -1,11 +1,11 @@
-'use client'
-import { navbarData } from '@/constants/navbarData'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React from 'react'
+"use client";
+import { navbarData } from "@/constants/NavData";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
 
 const Navbar = () => {
-    const pathname = usePathname()
+  const pathname = usePathname();
   return (
     <div className="hidden md:inline-flex w-1/3 tracking-widest items-center justify-between gap-7 text-sm capitalize font-semibold cursor-pointer">
       {navbarData.map((item) => (
@@ -36,6 +36,6 @@ const Navbar = () => {
       ))}
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
