@@ -8,7 +8,7 @@ import FavButton from './FavButton'
 import Login from './Login'
 import MobileMenu from './MobileMenu'
 import { currentUser } from '@clerk/nextjs/server'
-import { ClerkLoaded, SignedIn, UserButton } from '@clerk/nextjs'
+import { SignedIn, UserButton } from '@clerk/nextjs'
 
 const Header = async() => {
   const user = await currentUser()
