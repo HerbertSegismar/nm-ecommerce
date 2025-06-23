@@ -17,19 +17,23 @@ const Header = async() => {
       <Container className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-2 md:gap-0">
           <MobileMenu />
-          <Logo className="hover:scale-105"/>
+          <Logo className="hover:scale-105" />
         </div>
         <Navbar />
         <div className="flex items-center gap-4 text-darkGreen">
           <SearchBar />
           <CartIcon />
           <FavButton />
-          <ClerkLoaded>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          {!user && <Login />}
+          {/* <ClerkLoaded>
             <SignedIn>
               <UserButton />
             </SignedIn>
             {!user && <Login />}
-          </ClerkLoaded>
+          </ClerkLoaded> */}
         </div>
       </Container>
     </header>
