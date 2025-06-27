@@ -23,7 +23,7 @@ const SocialLink = [
     icon: <Linkedin className="size-4 md:size-5" />,
   },
   {
-    title: "Twitter",
+    title: "Twitch",
     link: "https://github.com/herbertsegismar",
     icon: <Twitch className="size-4 md:size-5" />,
   },
