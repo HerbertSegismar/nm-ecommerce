@@ -6,7 +6,7 @@ import { banner_1 } from '@/images';
 
 const HomeBanner = () => {
   return (
-    <div className="py-10 md:py-0 px-10 lg:px-24 flex items-center justify-between">
+    <div className="p-8 md:py-0 lg:px-24 flex items-center justify-between bg-lightBrown rounded-md ">
       <div className="space-y-4">
         <Title>
           Grab <span className='text-red-500 uppercase text-3xl'>huge discounts</span> online now, <br /> Enjoy up to 50%

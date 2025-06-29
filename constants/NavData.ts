@@ -22,3 +22,10 @@ export const categoriesData = [
   { name: "Washing Machines", path: "/washing-machines"},
   { name: "Gadget Accessories", path: "/gadget-accessories" }
 ];
+
+export const productType = [
+  { name: "Gadgets", path: "/gadgets" },
+  { name: "Appliances", path: "/appliances" },
+  { name: "Refrigerators", path: "/refrigerators"},
+  { name: "Others", path: "/others" }
+];
