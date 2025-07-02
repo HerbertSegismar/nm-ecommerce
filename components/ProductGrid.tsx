@@ -8,10 +8,10 @@ import { Loader2 } from 'lucide-react'
 import NoProductsAvailable from './NoProductsAvailable'
 import ProductCard from './ProductCard'
 
+
 type Product = {
-    _id: string;
-    // Add other product properties as needed
-    [key: string]: any;
+  _id: string;
+  // add other properties as needed, e.g. name, categories, etc.
 };
 
 const ProductGrid = () => {
